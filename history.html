@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company History - ARCHANA ENTERPRISES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .company-history {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+        }
+
+        .history-title {
+            text-align: center;
+            color: #1b8a3d;
+            font-size: 2.8rem;
+            margin-bottom: 60px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .history-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: #1b8a3d;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: linear-gradient(to bottom, #1b8a3d, #2cb55a);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        .milestone {
+            padding: 15px 40px;
+            position: relative;
+            width: 50%;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .milestone.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .milestone:nth-child(odd) {
+            left: 0;
+        }
+
+        .milestone:nth-child(even) {
+            left: 50%;
+        }
+
+        .milestone-content {
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .milestone-content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .year-badge {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #1b8a3d, #2cb55a);
+            color: white;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(27, 138, 61, 0.3);
+        }
+
+        .milestone-content h3 {
+            color: #1b8a3d;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .milestone-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .milestone-dot {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: #1b8a3d;
+            border: 4px solid white;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            box-shadow: 0 0 0 4px rgba(27, 138, 61, 0.2);
+        }
+
+        .milestone:nth-child(odd) .milestone-dot {
+            right: -52.5px;
+        }
+
+        .milestone:nth-child(even) .milestone-dot {
+            left: -52.5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+
+            .milestone {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+                left: 0 !important;
+            }
+
+            .milestone-dot {
+                left: 18px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include your header here -->
+
+    <section class="company-history">
+        <h1 class="history-title">Our Journey Through Time</h1>
+        <div class="timeline">
+            <div class="milestone">
+                <div class="milestone-content">
+                    <span class="year-badge">1995</span>
+                    <h3>Company Foundation</h3>
+                    <p>ARCHANA ENTERPRISES was established with a vision to revolutionize the packaging industry.</p>
+                </div>
+                <div class="milestone-dot"></div>
+            </div>
+
+            <div class="milestone">
+                <div class="milestone-content">
+                    <span class="year-badge">2000</span>
+                    <h3>Product Line Expansion</h3>
+                    <p>Introduced automated strapping machines and expanded our product portfolio.</p>
+                </div>
+                <div class="milestone-dot"></div>
+            </div>
+
+            <div class="milestone">
+                <div class="milestone-content">
+                    <span class="year-badge">2010</span>
+                    <h3>International Market Entry</h3>
+                    <p>Expanded operations to international markets and established global partnerships.</p>
+                </div>
+                <div class="milestone-dot"></div>
+            </div>
+
+            <div class="milestone">
+                <div class="milestone-content">
+                    <span class="year-badge">2015</span>
+                    <h3>Innovation Award</h3>
+                    <p>Received industry recognition for innovative packaging solutions and customer service excellence.</p>
+                </div>
+                <div class="milestone-dot"></div>
+            </div>
+
+            <div class="milestone">
+                <div class="milestone-content">
+                    <span class="year-badge">2023</span>
+                    <h3>Sustainable Solutions</h3>
+                    <p>Launched eco-friendly packaging solutions and implemented sustainable practices.</p>
+                </div>
+                <div class="milestone-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include your footer here -->
+
+    <script>
+        // Animation on scroll
+        function checkVisibility() {
+            const milestones = document.querySelectorAll('.milestone');
+            milestones.forEach(milestone => {
+                const rect = milestone.getBoundingClientRect();
+                const isVisible = rect.top <= window.innerHeight * 0.8;
+                if (isVisible) {
+                    milestone.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+    </script>
+</body>
+</html>

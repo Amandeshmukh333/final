@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ARCHANA ENTERPRISES</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #1b8a3d;
+            padding: 1.5rem;
+            color: white;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            padding: 30px;
+            background: #f8f8f8;
+            border-radius: 8px;
+        }
+
+        .contact-info h3 {
+            color: #1b8a3d;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .info-item {
+            margin-bottom: 20px;
+        }
+
+        .info-item h4 {
+            color: #1b8a3d;
+            margin-bottom: 5px;
+        }
+
+        .contact-form {
+            padding: 30px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        .required {
+            color: red;
+        }
+
+        .submit-btn {
+            background-color: #1b8a3d;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #156830;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>ARCHANA ENTERPRISES</h3>
+            <div class="info-item">
+                <h4>Address</h4>
+                <p>56, 35th Rd. Taichung Ind. Park,<br>Taichung 407, TAIWAN</p>
+            </div>
+            <div class="info-item">
+                <h4>Phone</h4>
+                <p>+886 4 23591858</p>
+            </div>
+            <div class="info-item">
+                <h4>Fax</h4>
+                <p>+886 4 23590686</p>
+            </div>
+            <div class="info-item">
+                <h4>Email</h4>
+                <p>info@archanaenterprises.com</p>
+            </div>
+            <div class="info-item">
+                <h4>Business Hours</h4>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send us a Message</h3>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label>Subject <span class="required">*</span></label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Message <span class="required">*</span></label>
+                    <textarea required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Name <span class="required">*</span></label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email <span class="required">*</span></label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="tel">
+                </div>
+                <div class="form-group">
+                    <label>Mobile <span class="required">*</span></label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

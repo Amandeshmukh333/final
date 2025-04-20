@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - ARCHANA ENTERPRISES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Include the same header and footer styles from index.html */
+        
+        .about-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(27, 138, 61, 0.1), transparent);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .about-content {
+            margin-bottom: 60px;
+            position: relative;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            backdrop-filter: blur(5px);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .about-content:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transform-style: preserve-3d;
+            transition: transform 0.4s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-8px) rotateX(5deg);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .year {
+            background: linear-gradient(45deg, #1b8a3d, #2cb55a);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(27, 138, 61, 0.2);
+            display: inline-block;
+            transform: translateZ(20px);
+        }
+
+        .about-grid {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-grid::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(27, 138, 61, 0.05),
+                transparent
+            );
+            transform: rotate(45deg);
+            animation: lightEffect 8s linear infinite;
+        }
+
+        @keyframes lightEffect {
+            0% { transform: rotate(45deg) translateX(-100%); }
+            100% { transform: rotate(45deg) translateX(100%); }
+        }
+
+        .about-image img {
+            transition: transform 0.5s ease, filter 0.5s ease;
+            filter: brightness(1);
+        }
+
+        .about-image img:hover {
+            transform: scale(1.05) translateY(-10px);
+            filter: brightness(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .about-section::before {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        .about-content p {
+            line-height: 1.8;
+            color: #444;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            padding: 15px;
+            border-left: 3px solid transparent;
+        }
+
+        .about-content p:hover {
+            border-left: 3px solid #1b8a3d;
+            background: rgba(27, 138, 61, 0.05);
+            transform: translateX(10px);
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 25px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 60px;
+            align-items: center;
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image img:hover {
+            transform: scale(1.02);
+        }
+
+        .year {
+            color: #1b8a3d;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(27, 138, 61, 0.1);
+            border-radius: 20px;
+        }
+
+        /* Add smooth scrolling for the entire page */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Add responsive adjustments */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item {
+                flex-direction: column !important;
+            }
+
+            .timeline-content {
+                width: 90%;
+                margin-left: 40px;
+            }
+
+            .timeline-content::before {
+                left: -40px !important;
+            }
+        }
+
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: #1b8a3d;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: #1b8a3d;
+            border-radius: 50%;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -60px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -60px;
+        }
+
+        .year {
+            color: #1b8a3d;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            color: #1b8a3d;
+            font-size: 1.8rem;
+            margin: 40px 0 20px;
+            font-weight: bold;
+            position: relative;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(to right, #1b8a3d, transparent);
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 35%;
+            height: 3px;
+            background: #1b8a3d;
+            animation: slideLine 3s infinite;
+        }
+
+        @keyframes slideLine {
+            0% { width: 0; }
+            50% { width: 35%; }
+            100% { width: 0; }
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Include the same header from index.html -->
+
+    <section class="about-section">
+        <div class="about-content">
+            <h2 class="section-title">OUR STORY</h2>
+            <p>Founded in 1995 in India, ARCHANA ENTERPRISES has become a leading manufacturer of automatic packaging systems. Our core philosophy—delicacy, dedication, and innovation—guides us in delivering top-quality products and exceptional service worldwide.</p>
+            
+            <h2 class="section-title">CUSTOMER COMMITMENT</h2>
+            <p>Innovation and Service Excellence</p>
+            <p>We address market challenges like predatory pricing through innovation and superior service. Effective communication ensures we understand and meet our customers' needs with tailored solutions.</p>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">QUALITY ASSURANCE</h2>
+                    <p>Our commitment to quality is unwavering. Every product undergoes rigorous testing and quality control measures to ensure it meets our high standards and your expectations.</p>
+                    
+                    <h2 class="section-title">GLOBAL PRESENCE</h2>
+                    <p>With a strong presence in both domestic and international markets, we serve clients across various industries worldwide, providing reliable packaging solutions and excellent after-sales support.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/mystery-box.jpg" alt="Mystery Box Packaging">
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="year">1995</div>
+                    <h3>Company Foundation</h3>
+                    <p>ARCHANA ENTERPRISES was established with a vision to revolutionize the packaging industry.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="year">2000</div>
+                    <h3>Product Line Expansion</h3>
+                    <p>Introduced automated strapping machines and expanded our product portfolio.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="year">2010</div>
+                    <h3>International Market Entry</h3>
+                    <p>Expanded operations to international markets and established global partnerships.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="year">2015</div>
+                    <h3>Innovation Award</h3>
+                    <p>Received industry recognition for innovative packaging solutions and customer service excellence.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <div class="year">2023</div>
+                    <h3>Sustainable Solutions</h3>
+                    <p>Launched eco-friendly packaging solutions and implemented sustainable practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include the same footer from index.html -->
+</body>
+</html>

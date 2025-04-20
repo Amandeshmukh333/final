@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Catalogues - ARCHANA ENTERPRISES</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #1b8a3d;
+            padding: 1.5rem;
+            color: white;
+        }
+
+        .catalog-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .catalog-item {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .catalog-item h3 {
+            color: #1b8a3d;
+            margin: 20px 0;
+            font-size: 24px;
+        }
+
+        .catalog-item p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background-color: #1b8a3d;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #156830;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E-Catalogues</h1>
+    </header>
+
+    <div class="catalog-container">
+        <div class="catalog-grid">
+            <div class="catalog-item">
+                <img src="images/strapping-machines-icon.png" alt="Strapping Machines">
+                <h3>Strapping Machines</h3>
+                <p>Complete guide for our strapping machine range</p>
+                <a href="catalogs/strapping-machines.pdf" class="download-btn">Download PDF</a>
+            </div>
+            
+            <div class="catalog-item">
+                <img src="images/pp-box-icon.png" alt="PP Box Straping Rolls">
+                <h3>PP Box Straping Rolls (Printed)</h3>
+                <p>Detailed specifications for strapping rolls</p>
+                <a href="catalogs/pp-box-strapping.pdf" class="download-btn">Download PDF</a>
+            </div>
+            
+            <div class="catalog-item">
+                <img src="images/pneumatic-tool-icon.png" alt="Pneumatic Strapping Tool">
+                <h3>Pneumatic-Strapping Tool</h3>
+                <p>Complete guide for pneumatic strapping tools</p>
+                <a href="catalogs/pneumatic-strapping.pdf" class="download-btn">Download PDF</a>
+            </div>
+            
+            <div class="catalog-item">
+                <img src="images/bop-tape-icon.png" alt="Bop Tape Roll">
+                <h3>Bop Tape Roll</h3>
+                <p>Specifications and applications of Bop Tape Rolls</p>
+                <a href="catalogs/bop-tape.pdf" class="download-btn">Download PDF</a>
+            </div>
+            
+            <div class="catalog-item">
+                <img src="images/polyolefin-icon.png" alt="Polyolefin Shirink Film Roll">
+                <h3>Polyolefin Shirink Film Roll</h3>
+                <p>Complete guide for Polyolefin Shrink Film products</p>
+                <a href="catalogs/polyolefin-film.pdf" class="download-btn">Download PDF</a>
+            </div>
+            
+            <div class="catalog-item">
+                <img src="images/brochure-icon.png" alt="Company Brochures">
+                <h3>Company Brochures</h3>
+                <p>Comprehensive overview of our company products and services</p>
+                <a href="catalogs/company-brochure.pdf" class="download-btn">Download PDF</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
